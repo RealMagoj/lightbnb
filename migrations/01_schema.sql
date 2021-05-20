@@ -19,7 +19,7 @@ CREATE TABLE properties (
   parking_spaces INTEGER NOT NULL DEFAULT 0,
   number_of_bathrooms INTEGER NOT NULL DEFAULT 0,
   number_of_bedrooms INTEGER NOT NULL DEFAULT 0,
-  thumbnail_photo VARCHAR(255) NOT NULL,
+  thumbnail_photo_url VARCHAR(255) NOT NULL,
   cover_photo_url VARCHAR(255) NOT NULL,
   country VARCHAR(255)  NOT NULL,
   street VARCHAR(255) NOT NULL,
