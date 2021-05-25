@@ -132,7 +132,6 @@ const getAllProperties = function(options, limit = 10) {
 
   return pool.query(queryString, queryParams)
     .then((result) => {
-      console.log(result.rows);
       return result.rows;
     })
     .catch((err) => {
