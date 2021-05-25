@@ -18,7 +18,6 @@ const users = require('./json/users.json');
  * @return {Promise<{}>} A promise to the user.
  */
 const getUserWithEmail = function(email) {
-  let user;
   return pool.query(`SELECT * FROM users WHERE users.email = $1;`, [email])
     .then((result) => {
       return result.rows[0] || null;
@@ -51,7 +50,6 @@ exports.getUserWithId = getUserWithId;
  * @return {Promise<{}>} A promise to the user.
  */
 const addUser =  function(user) {
-  console.log(user);
   return pool.query(`INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *;`, 
     [user.name, user.email, user.password])
     .then((result) => {
